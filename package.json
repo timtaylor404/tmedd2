@@ -1,0 +1,36 @@
+{
+  "name": "T-MED",
+  "version": "1.0.0",
+  "description": "TMED Medical Deliveries and Supplies",
+  "scripts": {
+    "clean": "rimraf public",
+    "dev:tailwind": "npx tailwindcss -i src/css/tailwind.css -o public/css/styles.css --watch",
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "build:tailwind": "npx tailwindcss -i src/css/tailwind.css -o public/css/styles.css --minify",
+    "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
+    "dev": "npm-run-all clean --parallel dev:*",
+    "build": "NODE_ENV=production npm-run-all clean build:eleventy build:tailwind"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timtaylor404/tmedd2.git"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "tailwind",
+    "tailwindcss"
+  ],
+  "author": "timtaylor404",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timtaylor404/tmedd2.git"
+  },
+  "homepage": "https://github.com/timtaylor404/tmedd2.git",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.3"
+  }
+}
